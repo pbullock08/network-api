@@ -1,8 +1,7 @@
-const { ObjectId } = require('mongoose').Types;
 const { User, Thought } = require('../models');
 
 module.exports = {
-    // GET all students
+    // GET all users
     async getUsers(req, res) {
         try {
             const users = await User.find();
@@ -12,7 +11,7 @@ module.exports = {
         }
     },
 
-    // GET a single student
+    // GET single user
     async getSingleUser(req, res) {
         try {
             const user = await User.findOne({ _id: req.params.userId })
@@ -36,7 +35,7 @@ module.exports = {
         }
     },
 
-    // update a user 
+    // UPDATE a user 
     async updateUser(req, res) {
         try {
             const user = await User.findOneAndUpdate(
@@ -53,7 +52,7 @@ module.exports = {
         }
     },
 
-    // delete a user and their thoughts
+    // DELETE a user and their thoughts
     async deleteUser(req, res) {
         try {
             const user = await User.findOneAndRemove({ _id: req.params.userId });
@@ -67,7 +66,7 @@ module.exports = {
         }
     },
 
-    // add a new friend to user's friend list
+    // ADD a new friend to user's friend list
     async addFriend(req, res) {
         try {
             const user = await User.findOneAndUpdate(
@@ -84,7 +83,7 @@ module.exports = {
         }
     },
 
-    // delete a friend from user's friend list
+    // DELETE a friend from user's friend list
     async removeFriend(req, res) {
         try {
             const user = await User.findOneAndUpdate(
