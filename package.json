@@ -1,0 +1,17 @@
+{
+  "name": "network-api",
+  "version": "1.0.0",
+  "description": "An API for a social network web application where users can create their thoughts, share their thoughts with friends, and react to friends’ thoughts.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.4.1"
+  }
+}
