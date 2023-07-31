@@ -2,7 +2,7 @@
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description
-  This application is the backend for a social network site that creates and test API routes to get, create, update, and delete users, their friends, their thoughts, and their reactions.
+This application is the backend for a social network site that creates and test API routes to get, create, update, and delete users, their friends, their thoughts, and their reactions.
 
   ## Table of Contents 
  * [Installation](#installation) 
@@ -23,11 +23,15 @@
 
   ## Usage
 
-  After following the installation instructions above you'll be able to use insomnia to get, create, update, and delete users, their friends, their thoughts, and their reactions to their friends' thoughts. 
+After following the installation instructions above you'll be able to use insomnia to get, create, update, and delete users, their friends, their thoughts, and their reactions to their friends' thoughts. 
 
   ## License 
 
 This application is licensed under the [MIT license.](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)
 
   ## Video Walkthrough
+
+https://github.com/pbullock08/network-api/assets/126013657/a8f76b79-3db3-4786-a1fd-2ca4495d1be7
+
+
   
