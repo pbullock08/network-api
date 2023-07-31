@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const dayjs = require('dayjs');
 const reactionSchema = require('./Reaction');
 
 // Schema to create a course model
@@ -14,12 +15,11 @@ const thoughtSchema = new Schema(
         createdAt: {
             type: Date,
             default: Date.now(),
-            get: (createdAt) => createdAt.format('MM-DD-YYYY'),
+            get: (createdAt) => dayjs(createdAt).format('MMM DD, YYYY [at] hh:mm a'),
         },
         username: {
-            type: Schema.Types.String,
+            type: String,
             required: true,
-            ref: 'User',
         },
         reactions: [reactionSchema],
     },

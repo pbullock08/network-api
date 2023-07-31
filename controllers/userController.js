@@ -15,6 +15,9 @@ module.exports = {
     async getSingleUser(req, res) {
         try {
             const user = await User.findOne({ _id: req.params.userId })
+                .populate('thoughts')
+                .populate('friends')
+                .populate('reactions')
                 .select('-__v');
             if (!user) {
                 return res.status(404).json({ message: 'No user with that ID!' })
@@ -59,7 +62,8 @@ module.exports = {
             if (!user) {
                 return res.status(404).json({ message: 'No user with that ID!' });
             }
-            res.json({ message: 'User successfully deleted' });
+            const thought = await Thought.deleteMany({ _id: { $in: user.thoughts } });
+            res.json({ message: 'User and thoughts deleted!' });
         } catch (err) {
             console.log(err);
             res.status(500).json(err);
