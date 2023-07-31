@@ -70,7 +70,7 @@ module.exports = {
             }
             const user = await User.findOneAndUpdate(
                 { thoughts: req.params.thoughtId },
-                { $pull: { thought: req.params.thoughtId } },
+                { $pull: { thoughts: req.params.thoughtId } },
                 { runValidators: true, new: true }
             );
             if (!user) {
